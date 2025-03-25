@@ -9,6 +9,8 @@ import Transfer from "./pages/Transfer";
 import Learn from "./pages/Learn";
 import Profile from "./pages/Profile";
 import ApiKeys from "./pages/ApiKeys";
+import Products from "./pages/Products";
+import Orders from "./pages/Orders";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/learn" element={<Learn />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/api-keys" element={<ApiKeys />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/orders" element={<Orders />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

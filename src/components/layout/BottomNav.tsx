@@ -1,5 +1,5 @@
 
-import { Home, SendHorizontal, BookOpen, User } from "lucide-react";
+import { Home, SendHorizontal, BookOpen, User, ShoppingBag, Package } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const BottomNav = () => {
@@ -20,10 +20,16 @@ const BottomNav = () => {
       active: path === "/transfer"
     },
     {
-      name: "Learn",
-      icon: BookOpen,
-      path: "/learn",
-      active: path === "/learn"
+      name: "Products",
+      icon: ShoppingBag,
+      path: "/products",
+      active: path === "/products"
+    },
+    {
+      name: "Orders",
+      icon: Package,
+      path: "/orders",
+      active: path === "/orders" || path.startsWith("/orders/")
     },
     {
       name: "Profile",
@@ -41,7 +47,7 @@ const BottomNav = () => {
             <Link
               key={item.name}
               to={item.path}
-              className={`flex flex-col items-center justify-center w-1/4 transition-all duration-200 ${
+              className={`flex flex-col items-center justify-center w-1/5 transition-all duration-200 ${
                 item.active 
                   ? "text-wallet-blue scale-110" 
                   : "text-wallet-darkGray/60"
