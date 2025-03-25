@@ -11,6 +11,7 @@ import Profile from "./pages/Profile";
 import ApiKeys from "./pages/ApiKeys";
 import Products from "./pages/Products";
 import Orders from "./pages/Orders";
+import OrderDetails from "./pages/OrderDetails";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/api-keys" element={<ApiKeys />} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/orders/:id" element={<OrderDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
